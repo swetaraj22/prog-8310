@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Convert Number grades to Letter grades</title>
+    <script>
+       let number, letter;
+       const exitNumber = 999;
+       do {
+            number = prompt("Enter a number grade from 0 to 100");
+            if (isNaN(number)) {
+                alert('Not a number');
+            }
+            else if (number < 0 || number > 100) {
+                alert('number must be between 0-100');
+            }
+            else {
+                if( number <= 100 && number >= 88){
+                    letter = "A"; 
+                }
+                else if ( number <= 87 && number >= 80) {
+                    letter = "B";
+                }
+                else if ( number <= 79 && number >= 68) {
+                    letter = "C";
+                }
+                else if ( number <= 67 && number >= 60) {
+                    letter = "D";
+                }
+                else {
+                    letter = "F";
+                }
+                alert('Your letter grade is ' + letter );
+            }
+        } while (number != exitNumber);
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Thanks for using grade converter</h1>
+    </main>
+</body>
+</html>
