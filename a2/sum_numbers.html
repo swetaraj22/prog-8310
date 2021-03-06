@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">	
+    <title>Create a sum of number application</title>
+    <script>
+        let number, number1;
+        do {
+            do{
+                number=parseInt(prompt("Enter any top numbers to sum from 1 through 100"));
+                if(isNaN(number)){
+                    alert('input a number');
+                }
+                else if( number < 1 || number > 100){
+                    alert('Enter number between 1 to 100');
+                }
+            } while( number < 1 || number > 100 || isNaN(number));
+            if(number >= 1 && number <= 100 && !isNaN(number)){
+                let total = 0;
+                for( let i = 1; i <= number; i++){
+                    total += i;
+                } 
+                alert('total is sum of the numbers from 1 through ' + number + ' is ' + total);
+            }
+            number1=prompt('Do another sum? Put y for yes and n for no');
+        } while( number1 == 'y');    
+    </script>
+</head>
+<body>
+    <main>
+        <h1>Thanks for using sum of number application </h1>
+    </main>
+</body>
+</html>
